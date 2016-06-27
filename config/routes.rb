@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/index'
+  resources :users
+
   get 'courses/index'
 
-  root to: 'courses#index'
+  root to: 'users#new'
 
   # post '/set_name' do
   #   session['username'] = params['username'] || 'Bob'

@@ -4,4 +4,5 @@ class CoursesController < ApplicationController
 
   def course_parameters 
     params.require(:course).permit(:name, :provider_id)
+  end 
 end

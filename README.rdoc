@@ -9,6 +9,10 @@ Steps:
 * Redirect_to course_page
 * How should I handle callbacks? 
 
+Tips: 
+* A launch request is just a hidden form (see the inspect on this page: http://ltiapps.net/test/tc.php)
+
+
 going to need to send post requests 
 something like: 
 post "/lti_launch" do 
@@ -35,3 +39,7 @@ oauth_nonce
 
 ### Questions 
 DB relationships: need users.courses to work 
+
+LTI Video 
+2 separate web servers - Simulate both the tool consumer and the tool provider 
+
