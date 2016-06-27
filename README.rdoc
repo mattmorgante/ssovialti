@@ -22,10 +22,17 @@ post "/lti_launch" do
 
 
 ### Required Parameters 
-lti_message_type 
+lti_message_type (should be basic-lti-launch-request)
 lti_version (will be LTI-2p0)
 resource_link_id 
 user_id
+
+## Optional Parameters 
+lis_person_contact_email_primary
+lis_person_name_family
+lis_person_name_full
+lis_person_name_given
+lis_person_sourcedid (totally unnecessary)
 
 oauth 
 oauth_signature_method
@@ -40,6 +47,9 @@ oauth_nonce
 ### Questions 
 DB relationships: need users.courses to work 
 
-LTI Video 
-2 separate web servers - Simulate both the tool consumer and the tool provider 
+What will the Provider do? 
+* Check it's a POST request
+* Check message type 
+* Check consumery key exists
+* Check a rsource link ID exists
 

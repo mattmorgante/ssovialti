@@ -3,6 +3,6 @@ class CoursesController < ApplicationController
   end
 
   def course_parameters 
-    params.require(:course).permit(:name, :provider_id)
+    params.require(:course).permit(:name, :base_url, :provider)
   end 
 end
